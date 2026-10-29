@@ -1,0 +1,247 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "QuarterSumLadder: the quarter-sum ladder and the weight-two congruences"
+  description: >-
+    For a prime p = 1 (mod 8) and a quartic character chi modulo p (even, with w = chi(2) = +-1),
+    the development proves that the coordinates of B_(2,chi) = c0 + i c1 are integers with
+    c0 = 4(E_1 + E_-1), c1 = 4(E_i + E_-i) and c0 + c1 = p - 1 modulo 8, and that 8 divides both
+    exactly when w = 1, i.e. when 2 is a fourth power. A Gauss-Lehmer product argument gives the
+    quartic Gauss lemma w = (-1)^(R_1 + R_3) for the quarter counts R_r, the parity of the four quarter
+    counts when w = 1, and the parity of R_2 through the order of 2. For the quarter sum
+    Omega = x + iy (2N(Omega) = h^-(K) for the imaginary cyclic quartic field K of conductor 4p, not
+    formalized) it proves criteria in the quarter counts for 2^k | 2N(Omega), 2 <= k <= 6, a classical
+    evaluation of the fourth, the coordinate valuation formula, a congruence modulo 16 linking c0 - c1
+    to x - y, and the valuation of B_(2,chi) at 1 + i on its first three cases.
+  authors:
+    - "Joseph S. Farland"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Joseph S. Farland"
+
+classification:
+  arxiv: ["math.NT"]
+  msc2020: ["11R29", "11B68", "11A15", "11R16", "68V20"]
+
+sources:
+  - title: "The quarter-sum ladder and the weight-two congruences, formalized in Lean"
+    authors:
+      - "Joseph S. Farland"
+    type: "article"
+    location: "Preprint, Zenodo, 2026"
+    relationship: "formalizes"
+    note: >-
+      The companion paper of this formalization, by the same author. It restates the formalized
+      results of the manuscript below with proofs that follow the formal ones, and gives the
+      correspondence between the manuscript, the paper and the Lean names.
+    license: "CC-BY-4.0"
+    author_endorsement: "participated"
+  - title: "The even quartic class: weight-two congruences, the quarter-sum ladder, and 2-primary class groups"
+    authors:
+      - "Joseph S. Farland"
+    type: "article"
+    location: "Preprint (Paper IV of the author's series), 2026"
+    relationship: "formalizes"
+    note: >-
+      The paper and this formalization have the same author. Formalized: Section 2, Theorem 3.1 at
+      order 4, Theorems 3.2 and 3.3, Corollary 3.4 (first statement), the remark after Theorem 3.2,
+      Lemma 5.1 (the expansion), Theorems 5.2 to 5.4, Lemma 5.5, Theorem 5.6, Lemma 8.1 and
+      Theorem 8.2. Not formalized: Gauss's criterion in Theorem 3.2, Proposition 4.1, Theorem 3.1 at
+      order 8 and above and the octic part of Corollary 3.4, the pattern witnesses, Theorem 6.1,
+      Corollary 6.2, Theorem 7.1, the questions and the observations. On priority: Theorem 5.2 is,
+      through h^-(K) = 2N(Omega), the corollary to Theorem 4 of Brown and Parry (1978), and is
+      formalized in its elementary quarter-count form without a priority claim; the quartic Gauss
+      lemma and the h(-4p) criterion are classical.
+    license: "CC-BY-4.0"
+    author_endorsement: "participated"
+  - title: "Class numbers and biquadratic reciprocity"
+    authors:
+      - "K. S. Williams"
+      - "J. D. Currie"
+    type: "article"
+    location: "Canad. J. Math. 34 (1982), 969-988"
+    relationship: "background"
+    note: "The quartic Gauss lemma: the count of nonresidues in (0, p/4) is R_1 + R_3 and determines the quartic character of 2."
+    license: "unknown"
+    author_endorsement: "n/a"
+  - title: "Generalizations of Gauss's lemma"
+    authors:
+      - "E. Lehmer"
+    type: "article"
+    location: "Number Theory and Algebra (H. Zassenhaus, ed.), Academic Press, 1977, 187-194"
+    relationship: "background"
+    note: "The product argument formalized as gauss_lehmer_product."
+    license: "unknown"
+    author_endorsement: "n/a"
+  - title: "The 2-class group of biquadratic fields. II"
+    authors:
+      - "E. Brown"
+      - "C. J. Parry"
+    type: "article"
+    location: "Pacific J. Math. 78 (1978), 11-26"
+    relationship: "background"
+    note: "Corollary to Theorem 4 gives v_2(h) = 2, 3, >= 4 for Q(sqrt(-eps sqrt p)), the field K, in the three cases of Theorem 5.2."
+    license: "unknown"
+    author_endorsement: "n/a"
+  - title: "Note on primes of type x^2 + 32y^2, class number, and residuacity"
+    authors:
+      - "P. Barrucand"
+      - "H. Cohn"
+    type: "article"
+    location: "J. Reine Angew. Math. 238 (1969), 67-70"
+    relationship: "background"
+    note: "The classical criterion w = 1 iff h(-4p) = (p - 1)/2 (mod 8), formalized in counting form as quarter_interval_formula."
+    license: "unknown"
+    author_endorsement: "n/a"
+
+related_formalizations:
+  - id: "https://doi.org/10.5281/zenodo.23752170"
+    relationship: "builds-on"
+    note: "BandParityTower by the same author (Paper I). Its file Basic is copied here and renamed into the QuarterSumLadder namespace."
+  - id: "https://doi.org/10.5281/zenodo.23673067"
+    relationship: "builds-on"
+    note: "BandParity by the same author (Paper I, Theorem A)."
+
+status:
+  scope: >-
+    Formalized: the results listed under alignment. Not formalized: Gauss's criterion p = a^2 + 64b^2;
+    Barkan's evaluation B_(1,Theta) = -2 Omega and the relative class number formula (Proposition 4.1),
+    and Dirichlet's formula kappa = h(-4p)/2, which serve only to read the results as statements about
+    class numbers; Theorem 3.1 for characters of order 2^b >= 8 and the octic part of Corollary 3.4; the
+    pattern witnesses; the 2-class group (Theorem 6.1, Corollary 6.2), which needs class field theory;
+    the witness pairs (Theorem 7.1), which need class numbers; the counterexample at p = 337, the
+    questions and the observations.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: []
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["Claude (Anthropic)"]
+      framework: "Claude.ai with code execution"
+      tool_setup: >-
+        AI-assisted: the Lean code was drafted and repaired by Claude against the paper's
+        statements and proofs, compiled locally with lake, and the export of Solution was checked
+        with the Lean kernel, nanoda and con-ron.
+      cost:
+        wall_time: "about one day"
+        spend_usd: "subscription-based"
+        hardware: "API-only plus local machine"
+      prompting_notes: "The model was given the paper's statements and proofs and asked to formalize them without sorry or native_decide."
+  spend_usd: "subscription-based"
+  notes: >-
+    The author chose the scope (the elementary part of Paper IV: Sections 2 and 3, the ladder of
+    Section 5 and Section 8).
+
+fidelity:
+  divergences: >-
+    The thresholds are stated as divisibility of N(Omega) = x^2 + y^2 and N(B_2) = c0^2 + c1^2, since
+    padicValInt 2 0 = 0; the valuation forms give the exact values 1, 2 and 5, 6, and the lower bounds
+    3 and 7 under the hypotheses Omega != 0 and B_(2,chi) != 0, which always hold but need analytic
+    input. w = 1 is the hypothesis chi 2 = 1, proved equivalent to 2 being a fourth power in ZMod p.
+    kappa is the Legendre sum over (0, p/4) and the fifth threshold is stated for 2N(Omega); the
+    identifications with h(-4p)/2 and h^-(K) are not formalized. Theorem 3.1 is formalized at order 4
+    only, with c0, c1 defined by integer division, which weight_two_integrality shows is exact.
+    Lemma 8.1 is proved without its hypothesis w = 1. The parity statements are proved class by class
+    from the Gauss-Lehmer product rather than from doubling orbits, and the thresholds from the
+    coordinates rather than from the term valuations of Lemma 5.1.
+
+review:
+  status: "self-assessed"
+  reviewers:
+    - "Joseph S. Farland"
+  notes: >-
+    The definitions in Challenge.lean are copied verbatim from the development and compared by
+    Comparator. The statements and the companion paper were checked by an independent AI review, and
+    check/statements.py recomputes every statement for both quartic characters modulo all 556 primes
+    p = 1 (mod 8) below 20000. No external referee has reviewed the paper or the formalization.
+
+alignment:
+  namespace: "QuarterSumLadder"
+  statements:
+    - source: "Section 2, chi even, w = chi(2) = +-1, w = 1 iff 2 is a fourth power"
+      lean: "QuarterSumLadder.even_quartic_setting"
+      module: "Challenge"
+      status: "proved"
+    - source: "Section 2, |D_z| = Q and R_0 + R_1 + R_2 + R_3 = Q"
+      lean: "QuarterSumLadder.class_sizes"
+      module: "Challenge"
+      status: "proved"
+    - source: "Proof of Theorem 3.1 (M = 4): p | U_z, the coordinates are integers"
+      lean: "QuarterSumLadder.weight_two_integrality"
+      module: "Challenge"
+      status: "proved"
+    - source: "Theorem 3.1 at M = 4"
+      lean: "QuarterSumLadder.weight_two_coefficient_congruence"
+      module: "Challenge"
+      status: "proved"
+    - source: "Theorem 3.2 (without Gauss's criterion p = a^2 + 64 b^2)"
+      lean: "QuarterSumLadder.weight_two_mod_eight"
+      module: "Challenge"
+      status: "proved"
+    - source: "Proof of Theorem 3.2: the product argument behind the quartic Gauss lemma"
+      lean: "QuarterSumLadder.gauss_lehmer_product"
+      module: "Challenge"
+      status: "proved"
+    - source: "Proof of Theorem 3.2: the quartic Gauss lemma (-1)^(R_1 + R_3) = w (Williams and Currie)"
+      lean: "QuarterSumLadder.quartic_gauss_lemma"
+      module: "Challenge"
+      status: "proved"
+    - source: "Remark after Theorem 3.2: kappa = Q - 2(R_1 + R_3) and w = 1 iff kappa = Q (mod 4)"
+      lean: "QuarterSumLadder.quarter_interval_formula"
+      module: "Challenge"
+      status: "proved"
+    - source: "Theorem 3.3"
+      lean: "QuarterSumLadder.doubling_orbit_parity"
+      module: "Challenge"
+      status: "proved"
+    - source: "Corollary 3.4 (first statement)"
+      lean: "QuarterSumLadder.parity_patterns"
+      module: "Challenge"
+      status: "proved"
+    - source: "Lemma 5.1 (the expansion)"
+      lean: "QuarterSumLadder.quarter_sum_expansion"
+      module: "Challenge"
+      status: "proved"
+    - source: "Theorem 5.2 (divisibility form)"
+      lean: "QuarterSumLadder.ladder_bottom"
+      module: "Challenge"
+      status: "proved"
+    - source: "Theorem 5.2 (valuation form)"
+      lean: "QuarterSumLadder.ladder_bottom_valuation"
+      module: "Challenge"
+      status: "proved"
+    - source: "Theorem 5.3"
+      lean: "QuarterSumLadder.ladder_fourth"
+      module: "Challenge"
+      status: "proved"
+    - source: "Theorem 5.4"
+      lean: "QuarterSumLadder.ladder_fourth_classical"
+      module: "Challenge"
+      status: "proved"
+    - source: "Proof of Theorem 5.4: the parity of R_2 through ord_p(2)"
+      lean: "QuarterSumLadder.second_quarter_parity"
+      module: "Challenge"
+      status: "proved"
+    - source: "Lemma 5.5"
+      lean: "QuarterSumLadder.coordinate_valuation_formula"
+      module: "Challenge"
+      status: "proved"
+    - source: "Theorem 5.6"
+      lean: "QuarterSumLadder.ladder_fifth"
+      module: "Challenge"
+      status: "proved"
+    - source: "Lemma 8.1 (proved without the hypothesis w = 1)"
+      lean: "QuarterSumLadder.weight_two_comparison"
+      module: "Challenge"
+      status: "proved"
+    - source: "Theorem 8.2 (divisibility form)"
+      lean: "QuarterSumLadder.weight_two_trichotomy"
+      module: "Challenge"
+      status: "proved"
+    - source: "Theorem 8.2 (valuation form)"
+      lean: "QuarterSumLadder.weight_two_trichotomy_valuation"
+      module: "Challenge"
+      status: "proved"

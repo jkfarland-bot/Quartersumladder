@@ -1,0 +1,48 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "QuarterSumLadder.even_quartic_setting",
+    "QuarterSumLadder.class_sizes",
+    "QuarterSumLadder.weight_two_integrality",
+    "QuarterSumLadder.weight_two_coefficient_congruence",
+    "QuarterSumLadder.weight_two_mod_eight",
+    "QuarterSumLadder.gauss_lehmer_product",
+    "QuarterSumLadder.quartic_gauss_lemma",
+    "QuarterSumLadder.quarter_interval_formula",
+    "QuarterSumLadder.doubling_orbit_parity",
+    "QuarterSumLadder.parity_patterns",
+    "QuarterSumLadder.quarter_sum_expansion",
+    "QuarterSumLadder.ladder_bottom",
+    "QuarterSumLadder.ladder_bottom_valuation",
+    "QuarterSumLadder.ladder_fourth",
+    "QuarterSumLadder.ladder_fourth_classical",
+    "QuarterSumLadder.second_quarter_parity",
+    "QuarterSumLadder.coordinate_valuation_formula",
+    "QuarterSumLadder.ladder_fifth",
+    "QuarterSumLadder.weight_two_comparison",
+    "QuarterSumLadder.weight_two_trichotomy",
+    "QuarterSumLadder.weight_two_trichotomy_valuation"
+  ],
+  "definition_names": [
+    "QuarterSumLadder.gi",
+    "QuarterSumLadder.fiber",
+    "QuarterSumLadder.U",
+    "QuarterSumLadder.c0",
+    "QuarterSumLadder.c1",
+    "QuarterSumLadder.B2",
+    "QuarterSumLadder.T2",
+    "QuarterSumLadder.E",
+    "QuarterSumLadder.R",
+    "QuarterSumLadder.Omega",
+    "QuarterSumLadder.Q",
+    "QuarterSumLadder.kappa",
+    "QuarterSumLadder.vlam"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

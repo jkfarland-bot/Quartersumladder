@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "QuarterSumLadder: a Lean 4 formalization of the quarter-sum ladder and the weight-two congruences"
+authors:
+  - family-names: Farland
+    given-names: Joseph S.
+version: v1.0
+license: Apache-2.0
+repository-code: "https://github.com/jkfarland-bot/QuarterSumLadder"
+keywords:
+  - quartic characters
+  - generalized Bernoulli numbers
+  - class numbers
+  - quartic Gauss lemma
+  - Lean 4
+  - Mathlib
+  - formal verification
