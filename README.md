@@ -1,5 +1,10 @@
 # QuarterSumLadder
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23779531.svg)](https://doi.org/10.5281/zenodo.23779531)
+
+Software archive: version v1.0 is [doi:10.5281/zenodo.23779532](https://doi.org/10.5281/zenodo.23779532);
+all versions are [doi:10.5281/zenodo.23779531](https://doi.org/10.5281/zenodo.23779531).
+
 Lean 4 / Mathlib formalization of the elementary part of J. S. Farland, *The even quartic class:
 weight-two congruences, the quarter-sum ladder, and 2-primary class groups* (Paper IV of the
 author's series). It continues [BandParity](https://github.com/jkfarland-bot/bandparity),
