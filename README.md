@@ -12,7 +12,9 @@ author's series). It continues [BandParity](https://github.com/jkfarland-bot/ban
 [MellinDuality](https://github.com/jkfarland-bot/MellinDuality) (Paper II).
 
 The companion paper is J. S. Farland, *The quarter-sum ladder and the weight-two congruences,
-formalized in Lean* (preprint, Zenodo, 2026; DOI to be added).
+formalized in Lean* (preprint, Zenodo, 2026; v1.0
+[doi:10.5281/zenodo.23797240](https://doi.org/10.5281/zenodo.23797240), all versions
+[doi:10.5281/zenodo.23797239](https://doi.org/10.5281/zenodo.23797239)).
 
 Let `p ≡ 1 (mod 8)` be prime and `χ` a quartic character modulo `p` with values in `ℤ[i]`. Then `χ`
 is even and `w = χ(2) = ±1`. Put `Q = (p - 1)/4`, `R_r = #{0 < n < p/4 : χ(n) = i^r}`, the quarter sum
