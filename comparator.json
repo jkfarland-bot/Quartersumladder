@@ -24,21 +24,7 @@
     "QuarterSumLadder.weight_two_trichotomy",
     "QuarterSumLadder.weight_two_trichotomy_valuation"
   ],
-  "definition_names": [
-    "QuarterSumLadder.gi",
-    "QuarterSumLadder.fiber",
-    "QuarterSumLadder.U",
-    "QuarterSumLadder.c0",
-    "QuarterSumLadder.c1",
-    "QuarterSumLadder.B2",
-    "QuarterSumLadder.T2",
-    "QuarterSumLadder.E",
-    "QuarterSumLadder.R",
-    "QuarterSumLadder.Omega",
-    "QuarterSumLadder.Q",
-    "QuarterSumLadder.kappa",
-    "QuarterSumLadder.vlam"
-  ],
+  "definition_names": [],
   "permitted_axioms": [
     "propext",
     "Quot.sound",
