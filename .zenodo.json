@@ -1,0 +1,42 @@
+{
+  "title": "QuarterSumLadder: a Lean 4 formalization of the quarter-sum ladder and the weight-two congruences",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Farland, Joseph S.",
+      "orcid": "0009-0007-6809-804X"
+    }
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "quartic characters",
+    "generalized Bernoulli numbers",
+    "class numbers",
+    "quartic Gauss lemma",
+    "Lean 4",
+    "Mathlib",
+    "formal verification"
+  ],
+  "description": "<p>Lean 4 / Mathlib formalization accompanying J. S. Farland, \"The quarter-sum ladder and the weight-two congruences, formalized in Lean\" (doi:10.5281/zenodo.23797239). Let p = 1 (mod 8) be prime and chi a quartic character modulo p, so that chi is even and w = chi(2) = +-1. Put Q = (p - 1)/4, let R_r count the 0 &lt; n &lt; p/4 with chi(n) = i^r, and let Omega = x + iy be the quarter sum of chi over (0, p/4), whose norm is half the relative class number of the imaginary cyclic quartic field of conductor 4p (quoted, not formalized). The development proves that the coordinates of B_{2,chi} = c_0 + i c_1 are integers divisible by 4, with residues modulo 8 given by counts of integers m = 2 (mod 4) in the classes of chi, and that both are divisible by 8 exactly when 2 is a fourth power modulo p. A single product argument of Gauss and Lehmer gives the quartic Gauss lemma w = (-1)^(R_1 + R_3), the parity of the four quarter counts when w = 1, and the parity of R_2 through the order of 2. From these it proves criteria in terms of the quarter counts for 2^k | 2N(Omega) with 2 &lt;= k &lt;= 6, the formula v_2(x^2 + y^2) = 2 min(v_2 x, v_2 y) + [v_2 x = v_2 y], the congruence p(c_0 - c_1) = -4(x - y) (mod 16), and the valuation of B_{2,chi} at 1 + i, which is 5, 6, or at least 7.</p>\n<p>The statements are in Challenge.lean. Lean's comparator checks them against the proofs, with the definition bodies compared, and the proofs are replayed in the Lean, nanoda and con-ron kernels. No sorry, no native_decide; standard axioms only. The changes in each version are described in the release notes on GitHub: <a href=\"https://github.com/jkfarland-bot/Quartersumladder/releases\">github.com/jkfarland-bot/Quartersumladder/releases</a>.</p>",
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23797239",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://github.com/jkfarland-bot/Quartersumladder",
+      "relation": "isSupplementTo",
+      "scheme": "url",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.23795143",
+      "relation": "continues",
+      "scheme": "doi",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "AI assistance: the Lean code in this record was drafted and repaired by Claude (Anthropic), an AI model, from the statements and proofs of the companion paper \"The quarter-sum ladder and the weight-two congruences, formalized in Lean\" (doi:10.5281/zenodo.23797239), and compiled locally with lake. Every proof is checked by the Lean kernel, and Comparator replays the solution against the statement file under the Lean, NanoDa and con-ron kernels. The author, Joseph S. Farland, chose the scope, directed the work, and is responsible for the contents. No external human reviewer has checked the formalization."
+}
